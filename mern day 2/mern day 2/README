@@ -1,0 +1,5 @@
+Install jasmine with 'npm install -g jasmine'.
+Run 'npm install' and 'npm start' from the command line.
+The website is located at localhost:8080.
+Run the automated tests with 'jasmine'
+

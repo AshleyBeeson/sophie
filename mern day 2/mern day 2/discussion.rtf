@@ -1,0 +1,21 @@
+The tools I used for this project, beyond the most basic MERN stack, were:
+	babel
+	react-modal
+	webpack-dev-server
+	jasmine
+
+	I used jasmine as part of the Test-Driven Development procedure.  I used it for unit tests on the filters, which I had written separately from the rest of the program.  This gave me confidence of the correctness of the filters when I used them as the main logic of my program.
+
+	I used babel in order to write in React and ES6 code, which has more features and is less verbose than ES5.
+
+	I used webpack-dev-server, a small Express server, for its hot reloading feature, to help with rapid prototyping.
+
+	I used react-modal to display data such as the filtering options and bug details.  This means that the main feature of the program - the bug reports - are always on the screen to some degree.  It also eliminates the need for react-router.
+
+	I also used Material Design Lite, an implementation of Google's Material Design philosophy, for its clean design and responsive layout.
+
+	On the main page, I decided to only show a few select properties of the bugs - these are the issue ID, the summary, the assigned user, the priority, the severity and the status.  Each can be sorted in both ascending and descending order by clicking on the heading.  I chose these as I thought that they would be the most useful ones for someone trying to find a specific issue.  In particular, the fact that issueId starts with either 'ISSUE' or 'BUG' means that it is possible to effectively sort by type.  I chose the displayed properties carefully to take advantage of the relatively limited horizontal space.  That restriction was a consequence of the list-like design of the web page.  I decided to use such a design as I thought that it would give the best compromise between issues visible at once and identifying information visible for each issue.
+
+	Clicking on an issue brings up a modal showing all the details of it, including all the details of every action.  I chose to use a modal in order to simplify the user's mental model of the program.  As the list of issues never leaves the user's sight, and the main page is never navigated away from, they will never feel 'lost' in the program.  All the information on a specific model is viewable at once, and it would be quite simple to alter this in the future to include edit buttons for each field.  
+
+	The search modal allows one to filter the issues based on almost every aspect of the issues, apart from id numbers, actions and times.  It does allow for sorting by type, however.  Fields that are enumerated, such as priority, status or severity, are represented as check-boxes rather than as text boxes.
